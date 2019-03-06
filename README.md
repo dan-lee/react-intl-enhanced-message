@@ -63,7 +63,7 @@ However it adds following property:
 
 The translated messages can have HTML/JSX like 'tags' to indicate that the content should be replaced by an enhancer function.
 
-As suggested in [the linked issue](https://github.com/yahoo/react-intl/issues/513), every tag starts with the namespace 'x', e.g. like `<x:sth>`.
+As suggested in [the linked issue](https://github.com/yahoo/react-intl/issues/513#issuecomment-252114827), every tag starts with the namespace 'x', e.g. like `<x:sth>`.
 
 To illustrate this, see the following example:
 

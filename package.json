@@ -1,0 +1,63 @@
+{
+  "name": "react-intl-enhanced-message",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "Enhance formatted messages for react-intl",
+  "main": "src/index.tsx",
+  "scripts": {
+    "build": "pack build",
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@pika/pack": "0.3.4",
+    "@pika/plugin-build-node": "0.3.13",
+    "@pika/plugin-build-types": "0.3.13",
+    "@pika/plugin-build-web": "0.3.13",
+    "@pika/plugin-standard-pkg": "0.3.13",
+    "@types/jest": "24.0.9",
+    "@types/react": "16.8.6",
+    "@types/react-intl": "2.3.17",
+    "jest": "24.1.0",
+    "prettier": "1.16.4",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-intl": "2.8.0",
+    "react-testing-library": "6.0.0",
+    "ts-jest": "24.0.0",
+    "typescript": "3.3.3333"
+  },
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-intl": "^2.4.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "**/*.test.tsx",
+            "**/*.test.ts"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-types"
+      ]
+    ]
+  }
+}

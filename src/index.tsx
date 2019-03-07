@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl'
 type ReplaceCallback = (content: string) => ReactNode
 type Enhancers = { [key: string]: ReplaceCallback }
 
-interface IFormattedEnhancedMessageProps extends FormattedMessage.Props {
+interface IFormattedEnhancedMessageProps {
   enhancers: Enhancers
 }
 
@@ -41,7 +41,7 @@ const processMessage = (message: string, enhancers: Enhancers) => {
 }
 
 export const FormattedEnhancedMessage: FunctionComponent<
-  IFormattedEnhancedMessageProps
+  IFormattedEnhancedMessageProps & FormattedMessage.Props
 > = ({ enhancers, ...props }): ReactElement<FormattedMessage> => {
   return (
     <FormattedMessage {...props}>

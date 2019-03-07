@@ -1,11 +1,12 @@
 {
   "name": "react-intl-enhanced-message",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Enhance formatted messages for react-intl",
   "main": "src/index.tsx",
   "scripts": {
     "build": "pack build",
+    "publish": "pack publish",
     "test": "jest"
   },
   "dependencies": {},

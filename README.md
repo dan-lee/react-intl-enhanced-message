@@ -1,4 +1,9 @@
-# Installation
+# react-intl-enhanced-message
+
+[![Build Status](https://travis-ci.org/dan-lee/react-intl-enhanced-message.svg?branch=master)](https://travis-ci.org/dan-lee/react-intl-enhanced-message)
+[![npm](https://img.shields.io/npm/v/react-intl-enhanced-message.svg?branch=master)](https://travis-ci.org/dan-lee/react-intl-enhanced-message.svg)
+
+## Installation
 
 ```
 yarn add react-intl-enhanced-message
@@ -9,13 +14,13 @@ Following peer depepencies are required to be installed in your app:
 - `react >= 16.3.2`
 - `react-intl >= 2.0.0`
 
-# Example
+## Example
 
 Here's a simple example on CodeSandbox:
 
 [![Edit Simple FormattedEnhancedMessage example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ll3o45jq97?fontsize=14)
 
-# Why?
+## Why?
 
 This aims to solve this ongoing issue for react-intl: [Rich text formatting and translations](https://github.com/yahoo/react-intl/issues/513)
 
@@ -31,7 +36,7 @@ So…
 
 **However** it's as simple as it gets and only makes simplest replacements of values. So there's no support for nested elements or other fancy stuff. (_yet?_)
 
-# Usage
+## Usage
 
 ```jsx harmony
 import { FormattedEnhancedMessage } from 'react-intl-enhanced-message'
@@ -56,7 +61,7 @@ This will result in following HTML:
 Hello <strong>Dan</strong>!
 ```
 
-## FormattedEnhancedMessage
+### FormattedEnhancedMessage
 
 This component accepts all properties as [`FormattedMessage`](https://github.com/yahoo/react-intl/wiki/Components#formattedmessage) from [`react-intl`](https://github.com/yahoo/react-intl) with the following exceptions:
 

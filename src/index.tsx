@@ -21,7 +21,7 @@ const processMessage = (message: string, enhancers: Enhancers) => {
 
   while ((result = regex.exec(message)) !== null) {
     const index = result.index
-    const [match, _, label, value] = result
+    const [match, , label, value] = result
 
     output.push(message.substring(0, index))
 

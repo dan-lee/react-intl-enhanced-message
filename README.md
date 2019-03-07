@@ -9,6 +9,12 @@ Following peer depepencies are required to be installed in your app:
 - `react >= 16.3.2`
 - `react-intl >= 2.0.0`
 
+# Example
+
+Here's a simple example on CodeSandbox:
+
+[![Edit Simple FormattedEnhancedMessage example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ll3o45jq97?fontsize=14)
+
 # Why?
 
 This aims to solve this ongoing issue for react-intl: [Rich text formatting and translations](https://github.com/yahoo/react-intl/issues/513)

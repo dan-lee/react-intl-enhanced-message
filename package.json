@@ -6,7 +6,7 @@
   "main": "src/index.tsx",
   "scripts": {
     "build": "pack build",
-    "preversion": "yarn test",
+    "preversion": "yarn test && yarn build",
     "postversion": "git push --tags origin HEAD && yarn publish",
     "test": "jest"
   },

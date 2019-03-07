@@ -16,7 +16,6 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/preset-react": "7.0.0",
-    "@babel/preset-typescript": "7.3.3",
     "@pika/pack": "0.3.4",
     "@pika/plugin-build-node": "0.3.13",
     "@pika/plugin-build-types": "0.3.13",

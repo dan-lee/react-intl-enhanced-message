@@ -6,8 +6,10 @@
   "main": "src/index.tsx",
   "scripts": {
     "build": "pack build",
-    "publish": "pack publish",
     "test": "jest"
+  },
+  "repository": {
+    "url": "https://github.com/dan-lee/react-intl-enhanced-message"
   },
   "dependencies": {},
   "devDependencies": {

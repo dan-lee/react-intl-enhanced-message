@@ -7,7 +7,7 @@
   "scripts": {
     "build": "pack build",
     "preversion": "yarn test && yarn build",
-    "postversion": "git push --tags origin HEAD && yarn publish",
+    "postversion": "git push --tags origin HEAD && yarn publish pkg",
     "test": "jest"
   },
   "repository": {

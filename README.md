@@ -14,6 +14,26 @@ Following peer depepencies are required to be installed in your app:
 - `react >= 16.3.2`
 - `react-intl >= 2.0.0`
 
+### 👉 Note:
+
+If you need this to be picked up by [`babel-plugin-react-intl`](https://github.com/yahoo/babel-plugin-react-intl) I suggest to install the fork [`@allthings/babel-plugin-react-intl`](https://github.com/allthings/babel-plugin-react-intl) as the  original seems not to be maintained anymore.
+
+With this you can use it like:
+
+**`.babelrc`**
+```json
+{
+  "plugins": [
+    ["@allthings/babel-plugin-react-intl", {
+      "additionalComponentNames": {
+        "react-intl-enhanced-message": ["FormattedEnhancedMessage"],
+      },
+    }]
+  ]
+}
+
+```
+
 ## Example
 
 Here's a simple example on CodeSandbox:

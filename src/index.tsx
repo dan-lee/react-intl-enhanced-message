@@ -14,7 +14,7 @@ interface IFormattedEnhancedMessageProps {
 }
 
 const processMessage = (message: string, enhancers: Enhancers) => {
-  const regex = /<(x:([\da-z_-]+))>(.+?)<\/\1>/gi
+  const regex = /<(x:([\da-z_-]+))>(.*?)<\/\1>/gi
   const output: ReactNode[] = []
   let result
   let key = 0

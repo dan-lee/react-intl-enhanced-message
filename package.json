@@ -13,7 +13,9 @@
   "repository": {
     "url": "https://github.com/dan-lee/react-intl-enhanced-message"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/preset-env": "7.4.3"
+  },
   "devDependencies": {
     "@babel/preset-react": "7.0.0",
     "@pika/pack": "0.3.4",

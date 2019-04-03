@@ -95,4 +95,30 @@ describe('FormattedEnhancedMessage', () => {
       `"Hi <strong>Daniel</strong>, good &lt;x:no&gt;morning&lt;/x:no&gt;!"`
     )
   })
+
+  it('should handle nested enhancers', () => {
+    const { container } = wrappedRender(
+      <FormattedEnhancedMessage
+        id="greeting"
+        defaultMessage="<x:em>Hi <x:strong>Daniel</x:strong>, good day!</x:em>"
+        enhancers={{ strong: name => <strong>{name}</strong>, em: children => <em>{children}</em> }}
+      />
+    )
+    expect(container.innerHTML).toMatchInlineSnapshot(
+      `"<em>Hi <strong>Daniel</strong>, good day!</em>"`
+    )
+  })
+
+  it('should handle nested enhancers where outer is not found', () => {
+    const { container } = wrappedRender(
+      <FormattedEnhancedMessage
+        id="greeting"
+        defaultMessage="<x:em>Hi <x:strong>Daniel</x:strong>, good day!</x:em>"
+        enhancers={{ strong: name => <strong>{name}</strong> }}
+      />
+    )
+    expect(container.innerHTML).toMatchInlineSnapshot(
+      `"&lt;x:em&gt;Hi <strong>Daniel</strong>, good day!&lt;/x:em&gt;"`
+    )
+  })
 })

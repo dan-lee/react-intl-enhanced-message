@@ -54,7 +54,13 @@ So…
 
 → Then this library might be just right for you 🥳
 
-**However** it's as simple as it gets and only makes simplest replacements of values. So there's no support for nested elements or other fancy stuff. (_yet?_)
+**However** it's as simple as it gets and only makes simplest replacements of values. 
+
+Be aware that replacements of an arbitrary depth is _not supported yet_, only one level deep so far. 
+
+For example: `<a><b><c>…</c></b></a>`
+
+Only replacements `b` and `c` would be carried out. This is to reduce complexity. If you need deeper levels to be supported I am happy to receive PRs. 
 
 ## Usage
 
@@ -110,7 +116,7 @@ const translation = `
 Good <x:em>morning</x:em> <x:italic>Dan</x:italic>!
 We hope you have a <x:em>beautiful</x:em> day so far.
 
-<x:em><x:italic>Only the outer 'tag' would be replace correctly here.</x:italic></x:em>
+<x:em><x:italic>Emphasized and italic text here!</x:italic></x:em>
 
 <x:unknown>This will be left untouched as there is no enhancer registered for unknown.</x:unknown>
 `

@@ -6,7 +6,7 @@ import React, {
 } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-type ReplaceCallback = (content: string) => ReactNode
+type ReplaceCallback = (content: string | ReactNode | ReactNode[]) => ReactNode
 type Enhancers = { [key: string]: ReplaceCallback }
 
 interface IFormattedEnhancedMessageProps {
@@ -26,9 +26,9 @@ const processMessage = (message: string, enhancers: Enhancers) => {
     output.push(message.substring(0, index))
 
     if (label in enhancers) {
-      output.push(<Fragment key={key++}>{enhancers[label](value)}</Fragment>)
+      output.push(<Fragment key={key++}>{enhancers[label](processMessage(value, enhancers))}</Fragment>)
     } else {
-      output.push(match)
+      output.push(<Fragment key={key++}>{`<x:${label}>`}{processMessage(value, enhancers)}{`</x:${label}>`}</Fragment>);
     }
 
     message = message.substring(index + match.length, message.length + 1)

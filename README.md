@@ -1,3 +1,7 @@
+# Deprecated ⚠️
+
+This repository is deprecated because in the meantime `babel-plugin-react-intl` does support `additionalComponentNames` out of the box: https://github.com/formatjs/formatjs/tree/master/packages/babel-plugin-react-intl#options
+
 # react-intl-enhanced-message
 
 [![Build Status](https://travis-ci.org/dan-lee/react-intl-enhanced-message.svg?branch=master)](https://travis-ci.org/dan-lee/react-intl-enhanced-message)
